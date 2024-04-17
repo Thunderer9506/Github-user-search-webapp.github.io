@@ -1,5 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 body{
     padding: 0;
     margin: 0;
     background-color: #f4f6ff;
+    font-family: "Space Mono";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin-top: 10%;
+    height:auto;
+    width: 50rem;
+}
+
+button{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.header{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    .colorMode{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+}
+
+.searchBar{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fffefe;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+    .search{
+        padding-left: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        p{
+            margin: 2px;
+        }
+    }
+    .searchButton{
+        background-color: hsl(212 100% 50%);
+        color:  hsl(0 0% 100%);
+        border-radius: 7px;
+        padding: 5px 10px 5px 10px;
+        p{
+            margin: 2px;
+        }
+    }
 }
