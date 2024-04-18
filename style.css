@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+
+:root{
+    --darkBlue:hsl(217 21% 21%);
+    --marine:hsl(217 35% 45%);
+    --grayBlue:hsl(217 20% 51%);
+    --white:#ffffff;
+    --blue:hsl(212 100% 50%);
+}
 body{
     padding: 0;
     margin: 0;
@@ -8,10 +16,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 700;
+    color: var(--grayBlue)
 }
 
 .container{
-    margin-top: 10%;
+    margin-top: 9%;
     height:auto;
     width: 50rem;
 }
@@ -25,17 +35,33 @@ button{
     cursor: pointer;
     outline: inherit;
 }
+p{
+    font-weight: 100;
+}
 
 .header{
     margin: 0;
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
+    h1{
+        color: var(--darkBlue);
+        font-size: 26px;
+        margin: 0;
+    }
     .colorMode{
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 10px;
+        color: var(--marine);
+        p{
+            margin: 0;
+            font-size: 1rem;
+            letter-spacing: 2.5px;
+            font-weight: 700;
+            
+        }
     }
 
 }
@@ -45,9 +71,10 @@ button{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fffefe;
+    background-color: var(--white);
     padding: 5px 5px 5px 5px;
-    border-radius: 10px;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     .search{
         padding-left: 10px;
         display: flex;
@@ -56,15 +83,89 @@ button{
         gap: 10px;
         p{
             margin: 2px;
+            font-size: 0.8rem;
         }
     }
     .searchButton{
         background-color: hsl(212 100% 50%);
-        color:  hsl(0 0% 100%);
+        color:  var(--white);
         border-radius: 7px;
         padding: 5px 10px 5px 10px;
         p{
+            font-weight: 700;
             margin: 2px;
+        }
+    }
+}
+.main{
+    display: flex;
+    margin-top: 1rem;
+    background-color: var(--white);
+    padding:2rem 0px 0px 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    img{
+        height: 8rem;
+        width: auto;
+        border-radius: 8rem;
+    }
+}
+
+.info{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 2rem 0px 2.3rem;
+
+    .infoHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        .username{
+            h2{
+                margin: 0;
+                color: var(--darkBlue);
+                font-size: 26px;
+            }
+            a{
+                color: var(--blue);
+                font-weight: 100;
+            }
+        }
+        p{
+            margin: 0;
+        }
+    }
+    
+    .data{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        width: 100%;
+        background-color: hsl(227 100% 98%);
+        border-radius: 1rem;
+        .number{
+            font-weight: 700;
+            color:var(--darkBlue);
+            font-size: 22px;
+        }
+    }
+
+    .links{
+        display: grid;
+        grid-template-columns: 20rem 10rem;
+        grid-template-rows: 3.5rem 3.5rem;
+        .location,.twitter,.link,.business{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--marine);
+            p{
+                margin: 0px;
+            }
         }
     }
 }
