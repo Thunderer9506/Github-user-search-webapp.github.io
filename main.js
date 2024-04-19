@@ -14,6 +14,16 @@ function whereWhat(where,what){
     }
 }
 
+function changeColor(){
+    if (document.querySelector(".colorMode p").innerText === "DARK"){
+        document.querySelector(".colorMode i").setAttribute("class","fa-solid fa-sun fa-lg")
+        document.querySelector(".colorMode p").innerText = "LIGHT"
+    }
+    else if(document.querySelector(".colorMode p").innerText === "LIGHT"){
+        document.querySelector(".colorMode i").setAttribute("class","fa-solid fa-moon fa-xl")
+        document.querySelector(".colorMode p").innerText = "DARK"
+    }
+}
 
 function getData(whose){
     fetch("https://api.github.com/users/"+whose)
