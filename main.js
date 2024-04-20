@@ -2,7 +2,6 @@ const input = document.getElementsByTagName("input")[0]
 const month = ["Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sept","Oct","Nov","Dec"];
 
 function getValue(){
-    console.log(input.value)
     getData(input.value)
 }
 function whereWhat(where,what){
@@ -18,10 +17,22 @@ function changeColor(){
     if (document.querySelector(".colorMode p").innerText === "DARK"){
         document.querySelector(".colorMode i").setAttribute("class","fa-solid fa-sun fa-lg")
         document.querySelector(".colorMode p").innerText = "LIGHT"
+        document.documentElement.style.setProperty('--white', 'hsl(220 40% 13%)');
+        document.documentElement.style.setProperty('--darkBlue', '#ffffff');
+        document.querySelector(".data").style.backgroundColor = "hsl(220 40% 13%)"
+        document.documentElement.style.setProperty('--background', 'hsl(222 41% 20%)');
+        document.documentElement.style.setProperty('--grayBlue', '#ffffff');
+        document.documentElement.style.setProperty('--marine', '#ffffff');
     }
     else if(document.querySelector(".colorMode p").innerText === "LIGHT"){
         document.querySelector(".colorMode i").setAttribute("class","fa-solid fa-moon fa-xl")
         document.querySelector(".colorMode p").innerText = "DARK"
+        document.documentElement.style.setProperty('--white', '#ffffff');
+        document.documentElement.style.setProperty('--darkBlue', 'hsl(217 21% 21%)');
+        document.querySelector(".data").style.backgroundColor = "hsl(227 100% 98%)"
+        document.documentElement.style.setProperty('--background', '#ffffff');
+        document.documentElement.style.setProperty('--grayBlue', 'hsl(217 20% 51%)');
+        document.documentElement.style.setProperty('--marine', 'hsl(217 35% 45%)');
     }
 }
 
