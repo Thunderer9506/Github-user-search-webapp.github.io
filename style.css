@@ -9,11 +9,6 @@
     --blue:hsl(212 100% 50%);
     --background:#fff;
 }
-@media (min-width:700px){
-
-}
-
-
 
 
 body{
@@ -31,8 +26,15 @@ body{
 .container{
     margin-top: 8%;
     height:auto;
-    width: 53rem;
+    width: 50rem;
 }
+@media (max-width:800px){
+    .container{
+        margin-top: 10%;
+        width: 90%;
+    }
+}
+
 
 button{
     background: none;
@@ -68,10 +70,8 @@ p{
             font-size: 1rem;
             letter-spacing: 2.5px;
             font-weight: 700;
-            
         }
     }
-
 }
 
 .searchBar{
@@ -96,9 +96,16 @@ p{
             font-size: 0.8rem;
             font-family: "Space Mono";
             width: 20rem;
+            color: black;
             background-color: var(--background);
         }
     }
+    
+@media (max-width:800px) {
+    .search input{
+        width: 12rem;
+    }
+}
     
     .searchButton{
         background-color: var(--blue);
@@ -125,6 +132,15 @@ p{
         width: auto;
         border-radius: 8rem;
     }
+    
+}
+@media (max-width:800px) {
+    .main{
+        padding:0.5rem;
+    }
+    .main img{
+        display: none;
+    }
 }
 
 .info{
@@ -135,12 +151,16 @@ p{
     margin: 1rem 2rem 0px 2.3rem;
 
     .infoHeader{
-        display: flex;
-        justify-content: space-between;
-        align-items: start;
         width: 100%;
         margin-bottom: 1.5rem;
+        img{
+            display: none;
+        }
         .username{
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            width: 100%;
             h2{
                 margin: 0;
                 color: var(--darkBlue);
@@ -150,13 +170,14 @@ p{
                 color: var(--blue);
                 font-weight: 100;
             }
-        }
-        p{
+            p{
             margin: 0;
-            color: hsl(217 20% 51%);
+            }
         }
+        
+
     }
-    
+
     .data{
         display: flex;
         justify-content: space-around;
@@ -187,6 +208,50 @@ p{
         .link a{
             color: var(--marine);
             font-weight: 100;
+        }
+    }
+
+    @media (max-width:800px) {
+        .infoHeader{
+            display:inline-block;
+            width: 10rem;
+        }
+    }
+}
+@media (max-width:800px) {
+    .info{
+        display:block;
+        margin: 1rem;
+        .infoHeader{
+            display: flex;
+            width: 15rem;
+            justify-content: center;
+            align-items: center;
+            .username{
+                padding-left: 1rem;
+                display: block;
+                .name{
+                    h2{
+                        font-size: 24px;
+                    }
+                    a{
+                        font-size: 12px;
+                    }
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+            img{
+                display: block;
+                height: 6rem;
+                width: auto;
+                border-radius: 6rem;
+            }
+        }
+        .links{
+            display: block;
+            margin-top: 1rem;
         }
     }
 }
