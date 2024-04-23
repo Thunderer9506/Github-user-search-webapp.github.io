@@ -23,6 +23,7 @@ function changeColor(){
         document.documentElement.style.setProperty('--background', 'hsl(222 41% 20%)');
         document.documentElement.style.setProperty('--grayBlue', '#ffffff');
         document.documentElement.style.setProperty('--marine', '#ffffff');
+        document.querySelector(".search input").style.color = "#ffffff"
     }
     else if(document.querySelector(".colorMode p").innerText === "LIGHT"){
         document.querySelector(".colorMode i").setAttribute("class","fa-solid fa-moon fa-xl")
@@ -33,6 +34,8 @@ function changeColor(){
         document.documentElement.style.setProperty('--background', '#ffffff');
         document.documentElement.style.setProperty('--grayBlue', 'hsl(217 20% 51%)');
         document.documentElement.style.setProperty('--marine', 'hsl(217 35% 45%)');
+        
+        document.querySelector(".search input").style.color = "black"
     }
 }
 
@@ -52,7 +55,7 @@ function getData(whose){
         document.querySelector(".username a").setAttribute("href",data["html_url"])
         document.querySelector(".username a").innerText = "@"+data["login"]
         document.querySelector(".joined").innerText = "Joined "+date.getDate()+" "+month[date.getMonth()]+" "+date.getFullYear()
-        document.querySelector(".bio").innerText = data["bio"]
+        whereWhat(document.querySelector(".bio"),data["bio"])
         document.querySelector(".repos .number").innerText = data["public_repos"]
         document.querySelector(".followers .number").innerText = data["followers"]
         document.querySelector(".following .number").innerText = data["following"]
